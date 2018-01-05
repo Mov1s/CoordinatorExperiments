@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginViewController" customModule="Coordinator" customModuleProvider="target">
+            <connections>
+                <outlet property="activityIndicator" destination="tw2-AM-hr4" id="GoY-BX-duU"/>
+                <outlet property="loginFormCenterConstraint" destination="MgG-cH-r5H" id="m9m-8e-1Gj"/>
+                <outlet property="loginFormView" destination="Z5g-tl-n9D" id="cxr-bo-GbE"/>
+                <outlet property="nameLabel" destination="8Mo-bk-tR3" id="19c-0s-jda"/>
+                <outlet property="view" destination="iN0-l3-epB" id="aFl-O9-iPL"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <activityIndicatorView opaque="NO" alpha="0.0" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="tw2-AM-hr4">
+                    <rect key="frame" x="169" y="325.5" width="37" height="37"/>
+                    <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </activityIndicatorView>
+                <label opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome Ryan" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Mo-bk-tR3">
+                    <rect key="frame" x="92" y="180" width="192" height="36"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Z5g-tl-n9D" userLabel="Login Form">
+                    <rect key="frame" x="16" y="403.5" width="343" height="80"/>
+                    <subviews>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vtz-Vi-TIO">
+                            <rect key="frame" x="0.0" y="0.0" width="343" height="30"/>
+                            <nil key="textColor"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jd0-1X-lhc">
+                            <rect key="frame" x="0.0" y="40" width="343" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="T1Z-4d-7uS"/>
+                            </constraints>
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <state key="normal" title="Log In"/>
+                            <connections>
+                                <action selector="onLoginTapped:" destination="-1" eventType="touchUpInside" id="fFg-9w-hnX"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="vtz-Vi-TIO" firstAttribute="leading" secondItem="Z5g-tl-n9D" secondAttribute="leading" id="0Cq-n3-eW6"/>
+                        <constraint firstItem="vtz-Vi-TIO" firstAttribute="top" secondItem="Z5g-tl-n9D" secondAttribute="top" id="7hK-0c-WuO"/>
+                        <constraint firstAttribute="bottom" secondItem="jd0-1X-lhc" secondAttribute="bottom" id="EkZ-oV-Kv5"/>
+                        <constraint firstAttribute="trailing" secondItem="vtz-Vi-TIO" secondAttribute="trailing" id="KkC-t0-elP"/>
+                        <constraint firstItem="jd0-1X-lhc" firstAttribute="leading" secondItem="Z5g-tl-n9D" secondAttribute="leading" id="RB9-OH-9Nm"/>
+                        <constraint firstItem="jd0-1X-lhc" firstAttribute="top" secondItem="vtz-Vi-TIO" secondAttribute="bottom" constant="10" id="mI4-If-IDU"/>
+                        <constraint firstAttribute="trailing" secondItem="jd0-1X-lhc" secondAttribute="trailing" id="ngI-MY-gmB"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="0.039215686270000001" green="0.30196078430000001" blue="0.54901960780000003" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="tw2-AM-hr4" firstAttribute="centerY" secondItem="vUN-kp-3ea" secondAttribute="centerY" id="6YP-xV-HpI"/>
+                <constraint firstItem="Z5g-tl-n9D" firstAttribute="centerY" secondItem="vUN-kp-3ea" secondAttribute="centerY" constant="100" id="MgG-cH-r5H"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Z5g-tl-n9D" secondAttribute="trailing" constant="16" id="bsc-FV-3Au"/>
+                <constraint firstItem="8Mo-bk-tR3" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="160" id="cMy-6u-hcr"/>
+                <constraint firstItem="tw2-AM-hr4" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="ceG-Sk-UdZ"/>
+                <constraint firstItem="Z5g-tl-n9D" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="g4c-Ko-xd1"/>
+                <constraint firstItem="8Mo-bk-tR3" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="seP-Uk-Pu1"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="34.5" y="54.5"/>
+        </view>
+    </objects>
+</document>
